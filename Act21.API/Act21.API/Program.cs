@@ -5,24 +5,24 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
-using Act21.API.Services;
+
 using System.Text.Json.Serialization;
-using Act21.API.Helpers;
-using Act21.API.Authorization;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-/*builder.Services.AddControllers();*/
+builder.Services.AddControllers();
 
-builder.Services.AddControllers().AddJsonOptions(x =>
+/*builder.Services.AddControllers().AddJsonOptions(x =>
  {
      // serialize enums as strings in api responses (e.g. Role)
      x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
- });
+ });*/
 
-builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+/*builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));*/
 
 /*builder.Services.AddScoped<IJwtUtils, JwtUtils>();*/
 /*builder.Services..AddScoped<IUserService, UserService>();*/
@@ -53,18 +53,18 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<UsersDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Act21ConnectionString")));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(
+/*builder.Services.AddDefaultIdentity<IdentityUser>(
     options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
-    .AddEntityFrameworkStores<UsersDbContext>();
+    .AddEntityFrameworkStores<UsersDbContext>();*/
 
 
-builder.Services.AddAuthorization(options =>
+/*builder.Services.AddAuthorization(options =>
 {
     options.FallbackPolicy = new AuthorizationPolicyBuilder()
         .RequireAuthenticatedUser()
         .Build();
-});
+});*/
 
 
 builder.Services.AddCors(options =>

@@ -1,6 +1,5 @@
-﻿/*using Act21.API.Data;
-using Act21.API.Models;
-using Act21.API.Services;
+﻿using Act21.API.Data;
+
 using Microsoft.AspNetCore.Authorization;
 
 using Microsoft.AspNetCore.Mvc;
@@ -13,13 +12,14 @@ namespace Act21.API.Controllers
     public class TokenController : ControllerBase
     {
         private readonly UsersDbContext _userContext;
-        private readonly ITokenService _tokenService;
+        /*private readonly ITokenService _tokenService;*/
 
-        public TokenController(UsersDbContext userContext, ITokenService tokenService)
+        /*public TokenController(UsersDbContext userContext, ITokenService tokenService)*/
+        public TokenController(UsersDbContext userContext)
         {
             this._userContext = userContext ?? throw new ArgumentNullException(nameof(userContext));
-            this._tokenService = tokenService ?? throw new ArgumentNullException(nameof(tokenService));
+            /*this._tokenService = tokenService ?? throw new ArgumentNullException(nameof(tokenService));*/
         }
 
     }
-}*/
+}

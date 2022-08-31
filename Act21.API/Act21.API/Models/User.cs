@@ -1,4 +1,4 @@
-﻿/*namespace Act21.API.Models
+﻿namespace Act21.API.Models
 {
     public class User
     {
@@ -17,5 +17,5 @@
     //public class AuthenticatedResponse
     //{
     //    public string? Token { get; set; }
-   // }
-}*/
+    // }
+}

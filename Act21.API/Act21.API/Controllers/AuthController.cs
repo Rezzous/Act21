@@ -32,11 +32,11 @@ namespace JwtAuthentication.Server.Controllers
             var user = _userContext.LoginInfos.FirstOrDefault(u =>
                 (u.Email == loginModel.Email) && (u.Password == loginModel.Password));
 
-            if (user==null)
+            /*if (user==null)
             {
                 return Unauthorized();
             }
-            
+            */
             
             var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@345"));
             var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
@@ -48,10 +48,7 @@ namespace JwtAuthentication.Server.Controllers
 
 
             };
-
-            
             /*_userContext.SaveChanges();*/
-           
             var tokeOptions = new JwtSecurityToken(
                 issuer: "https://localhost:7062",
                 audience: "https://localhost:7062",
@@ -65,7 +62,7 @@ namespace JwtAuthentication.Server.Controllers
             return Ok(new AuthenticatedResponse { Token = tokenString });
 
 
-            /*return Unauthorized();*/
+            
         }
     }
 }

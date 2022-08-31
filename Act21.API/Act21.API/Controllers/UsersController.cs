@@ -28,7 +28,7 @@ namespace Act21.API.Controllers
             return Ok(users);
         }
 
-        /*[HttpPost]
+        [HttpPost]
         public async Task<IActionResult> AddUser([FromBody] User userRequest)
         {
             userRequest.Id = Guid.NewGuid();
@@ -91,10 +91,10 @@ namespace Act21.API.Controllers
 
             return Ok(user);
         }
-*/
-      /*  public async Task<object> AddRole([FromBody] addRoleBindingModel)
+
+        /*public async Task<object> AddRole([FromBody] addRoleBindingModel)
         {
-            
+
         }*/
 
     }

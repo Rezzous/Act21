@@ -69,3 +69,4 @@ C:\Users\jrmyg\OneDrive\Bureau\projet act21\projet act21\Act21 API\Act21.API\Act
 C:\Users\jrmyg\OneDrive\Bureau\projet act21\projet act21\Act21 API\Act21.API\Act21.API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\jrmyg\OneDrive\Bureau\projet act21\projet act21\Act21 API\Act21.API\Act21.API\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\jrmyg\OneDrive\Bureau\projet act21\projet act21\Act21 API\Act21.API\Act21.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\jrmyg\OneDrive\Bureau\projet act21\projet act21\Act21 API\Act21.API\Act21.API\bin\Debug\net6.0\BCrypt.Net-Next.dll
